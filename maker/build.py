@@ -13,7 +13,7 @@ if __name__ == '__main__':
     fields = [x[0] for x in sf.fields[1:]]
     char_fields = [x[0] for x in sf.fields[1:] if x[1].lower()=='c'] 
 
-    base_api = os.path.join("../", "api")
+    base_api = os.path.abspath("../")
     if not os.path.isdir(base_api):
         os.mkdir(base_api)
 
@@ -51,16 +51,27 @@ if __name__ == '__main__':
         }
 
         
+        dict_dump = json.dumps(d)
         filename = os.path.join(extents_path, "%s.json" % iso3)
         with open(filename, "wb") as fs:
-            text = json.dumps(d)
-            fs.write(text)
+            fs.write(dict_dump)
             
-         
+        geo_dict_dump =  json.dumps(geojson_dict)
         geofilename = os.path.join(extents_path, "%s.geojson" % iso3)
         with open(geofilename, "wb") as fs:
-            text = json.dumps(geojson_dict)
-            fs.write(text)
+            fs.write(geo_dict_dump)
+
+        js_template = """
+            (function(){
+                 window.WoldBorders = window.WoldBorders || {};
+                 window.WoldBorders.%s = %s;
+            })();
+
+        """
+        js_code = js_template % (iso3, geo_dict_dump)
+        jsfilename = os.path.join(extents_path, "%s.js" % iso3)
+        with open(jsfilename, "wb") as fs:
+            fs.write(js_code)
             
          
     filename = os.path.join(base_api, "countrycodes.json")
