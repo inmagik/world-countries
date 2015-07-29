@@ -1,5 +1,9 @@
-# geo-extents
-geographic extents of places in the world as static jsons
+# world-countries
+Geographic shapes and info of countries of the world as static files.
 
+json
+geojson
+js
 
-http://thematicmapping.org/downloads/TM_WORLD_BORDERS-0.3.zip
+## Sources
+**world borders**: http://thematicmapping.org/downloads/TM_WORLD_BORDERS-0.3.zip
