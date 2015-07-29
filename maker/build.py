@@ -17,7 +17,7 @@ if __name__ == '__main__':
     if not os.path.isdir(base_api):
         os.mkdir(base_api)
 
-    extents_path = os.path.join(base_api, "extents")
+    extents_path = os.path.join(base_api, "countries")
     if not os.path.isdir(extents_path):
         os.mkdir(extents_path)
 
