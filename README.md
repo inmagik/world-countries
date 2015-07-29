@@ -1,9 +1,8 @@
 # world-countries
 This repository contains geographic info of countries of the world as static files.
 
-Data comes from the "WORLD BORDERS" dataset provided by Bjorn Sandvik, http://www.thematicmapping.org
-
-The dataset is available under a Creative Commons Attribution-Share Alike License. If you use this dataset, please provide a link to this website.
+## DATA
+Data comes from the "WORLD BORDERS" dataset provided by Bjorn Sandvik, http://www.thematicmapping.org. The dataset is available under a Creative Commons Attribution-Share Alike License. If you use this dataset, please provide a link to the original source.
 
 The original dataset consists of a shapefile with all countries of the world with the following data fields:
 
@@ -19,7 +18,7 @@ The original dataset consists of a shapefile with all countries of the world wit
 *LON	FLOAT (7,3)	Longitude
 *LAT	FLOAT (6,3)	Latitude
 
-All the geometry have been preprocessed to calculate some useful information:
+All the geometries have been preprocessed to calculate some useful information:
 
 * centroid of the geometry
 * representative point of the geometry
@@ -28,16 +27,16 @@ All the geometry have been preprocessed to calculate some useful information:
 ##API
 The information for each country has been indexed by the ISO 3166-1 Alpha-3 Country Code and is exposed in various formats:
 
-* json: country info in JSON format (does not includes geometry but includes bbox, centroid and representative_point)
+* **json**: country info in JSON format (does not includes geometry but includes bbox, centroid and representative_point)
   example: `http://inmagik.github.io/world-countries/countries/ITA.json`
-* geojson: GeoJSON file with country info (as a FeatureCollection with one item)
+* **geojson**: GeoJSON file with country info (as a FeatureCollection with one item)
   example: `http://inmagik.github.io/world-countries/countries/ITA.geojson`
-* javascript: a file containing the WorldBorders object, populated with the requested country data. Same content as json, but in js context and loadable via `<script>` tag
+* **javascript**: a file containing the WorldBorders object, populated with the requested country data. Same content as json, but in js context and loadable via `<script>` tag
   example: `http://inmagik.github.io/world-countries/countries/ITA.js`
 
 # Building the files
-The files can be built with the python script in the "maker" folder.
+The files can be built with the python script in the "maker" folder. To use it you must build a suitable python environment as described in requirements.txt file. More docs to come.
 
-
-## Sources
+## Data Sources
+Current data has been built 
 **world borders**: http://thematicmapping.org/downloads/TM_WORLD_BORDERS-0.3.zip
