@@ -61,12 +61,10 @@ if __name__ == '__main__':
         with open(geofilename, "wb") as fs:
             fs.write(geo_dict_dump)
 
-        js_template = """
-(function(){
+        js_template = """(function(){
      window.WorldBorders = window.WorldBorders || {};
      window.WorldBorders.%s = %s;
-})();
-        """
+})();"""
         js_code = js_template % (iso3, dict_dump)
         jsfilename = os.path.join(extents_path, "%s.js" % iso3)
         with open(jsfilename, "wb") as fs:
