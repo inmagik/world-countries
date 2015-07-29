@@ -22,7 +22,9 @@ All the geometries have been preprocessed to calculate some useful information:
 
 * centroid of the geometry
 * representative point of the geometry
-* bounding box (bbox) containing the geometry
+* bounding box (bbox) containing the geometry.
+ 
+All geographic data is in WGS84 projection.
 
 ##API
 The information for each country has been indexed by the ISO 3166-1 Alpha-3 Country Code and is exposed in various formats:
@@ -37,9 +39,9 @@ The information for each country has been indexed by the ISO 3166-1 Alpha-3 Coun
 
   example: http://inmagik.github.io/world-countries/countries/ITA.js
 
-# Building the files
+## Building the files
 The files can be built with the python script in the "maker" folder. To use it you must build a suitable python environment as described in requirements.txt file. More docs to come.
 
 ## Data Sources
-Current data has been built 
+Current data has been built from:
 **world borders**: http://thematicmapping.org/downloads/TM_WORLD_BORDERS-0.3.zip
