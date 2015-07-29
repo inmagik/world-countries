@@ -3,12 +3,17 @@ import os
 import json
 import shapefile
 from shapely.geometry import shape, mapping
+import sys
 
 if __name__ == '__main__':
-
+    """
+    Call passing the file downloaded from:
+    http://thematicmapping.org/downloads/TM_WORLD_BORDERS-0.3.zip
+    """
+    target = sys.argv[1]
+    
     countries_list = []
-
-    sf = shapefile.Reader("../datasource/TM_WORLD_BORDERS-0.3.shp")
+    sf = shapefile.Reader(target)
     shape_recs = sf.shapeRecords()
     fields = [x[0] for x in sf.fields[1:]]
     char_fields = [x[0] for x in sf.fields[1:] if x[1].lower()=='c'] 
