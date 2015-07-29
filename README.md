@@ -28,10 +28,13 @@ All the geometries have been preprocessed to calculate some useful information:
 The information for each country has been indexed by the ISO 3166-1 Alpha-3 Country Code and is exposed in various formats:
 
 * **json**: country info in JSON format (does not includes geometry but includes bbox, centroid and representative_point)
+
   example: http://inmagik.github.io/world-countries/countries/ITA.json
 * **geojson**: GeoJSON file with country info (as a FeatureCollection with one item)
+
   example: http://inmagik.github.io/world-countries/countries/ITA.geojson
 * **javascript**: a file containing the WorldBorders object, populated with the requested country data. Same content as json, but in js context and loadable via `<script>` tag
+
   example: http://inmagik.github.io/world-countries/countries/ITA.js
 
 # Building the files
