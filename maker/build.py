@@ -10,7 +10,15 @@ if __name__ == '__main__':
     Call passing the file downloaded from:
     http://thematicmapping.org/downloads/TM_WORLD_BORDERS-0.3.zip
     """
-    target = sys.argv[1]
+    try:
+        target = sys.argv[1]
+    except:
+        print
+        print "ERROR: no shapefile argument"
+        print "Download from: http://thematicmapping.org/downloads/TM_WORLD_BORDERS-0.3.zip"
+        print "bye!"
+        print
+        sys.exit(1)
     
     countries_list = []
     sf = shapefile.Reader(target)
