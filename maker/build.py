@@ -62,10 +62,10 @@ if __name__ == '__main__':
             fs.write(geo_dict_dump)
 
         js_template = """
-            (function(){
-                 window.WoldBorders = window.WoldBorders || {};
-                 window.WoldBorders.%s = %s;
-            })();
+(function(){
+     window.WorldBorders = window.WorldBorders || {};
+     window.WorldBorders.%s = %s;
+})();
 
         """
         js_code = js_template % (iso3, geo_dict_dump)
