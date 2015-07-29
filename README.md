@@ -6,17 +6,17 @@ Data comes from the "WORLD BORDERS" dataset provided by Bjorn Sandvik, http://ww
 
 The original dataset consists of a shapefile with all countries of the world with the following data fields:
 
-*FIPS	String(2)	FIPS 10-4 Country Code
-*ISO2	String(2)	ISO 3166-1 Alpha-2 Country Code
-*ISO3	String(3)	ISO 3166-1 Alpha-3 Country Code
-*UN	Short Integer(3)	ISO 3166-1 Numeric-3 Country Code
-*NAME	String(50)	Name of country/area
-*AREA	Long Integer(7)	Land area, FAO Statistics (2002)
-*POP2005	Double(10,0)	Population, World Population Prospects (2005)
-*REGION	Short Integer(3)	Macro geographical (continental region), UN Statistics
-*SUBREGION	Short Integer(3)	Geographical sub-region, UN Statistics
-*LON	FLOAT (7,3)	Longitude
-*LAT	FLOAT (6,3)	Latitude
+* FIPS	String(2)	FIPS 10-4 Country Code
+* ISO2	String(2)	ISO 3166-1 Alpha-2 Country Code
+* ISO3	String(3)	ISO 3166-1 Alpha-3 Country Code
+* UN	Short Integer(3)	ISO 3166-1 Numeric-3 Country Code
+* NAME	String(50)	Name of country/area
+* AREA	Long Integer(7)	Land area, FAO Statistics (2002)
+* POP2005	Double(10,0)	Population, World Population Prospects (2005)
+* REGION	Short Integer(3)	Macro geographical (continental region), UN Statistics
+* SUBREGION	Short Integer(3)	Geographical sub-region, UN Statistics
+* LON	FLOAT (7,3)	Longitude
+* LAT	FLOAT (6,3)	Latitude
 
 All the geometries have been preprocessed to calculate some useful information:
 
