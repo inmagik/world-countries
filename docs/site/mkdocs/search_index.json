@@ -1,0 +1,39 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "world-countries\n\n\nThis repository contains geographic info of countries of the world as static files.\n\n\nDATA\n\n\nData comes from the \"WORLD BORDERS\" dataset provided by Bjorn Sandvik, http://www.thematicmapping.org. The dataset is available under a Creative Commons Attribution-Share Alike License. If you use this dataset, please provide a link to the original source.\n\n\nThe original dataset consists of a shapefile with all countries of the world with the following data fields:\n\n\n\n\nFIPS  String(2)   FIPS 10-4 Country Code\n\n\nISO2  String(2)   ISO 3166-1 Alpha-2 Country Code\n\n\nISO3  String(3)   ISO 3166-1 Alpha-3 Country Code\n\n\nUN    Short Integer(3)    ISO 3166-1 Numeric-3 Country Code\n\n\nNAME  String(50)  Name of country/area\n\n\nAREA  Long Integer(7) Land area, FAO Statistics (2002)\n\n\nPOP2005   Double(10,0)    Population, World Population Prospects (2005)\n\n\nREGION    Short Integer(3)    Macro geographical (continental region), UN Statistics\n\n\nSUBREGION Short Integer(3)    Geographical sub-region, UN Statistics\n\n\nLON   FLOAT (7,3) Longitude\n\n\nLAT   FLOAT (6,3) Latitude\n\n\n\n\nAll the geometries have been preprocessed to calculate some useful information:\n\n\n\n\ncentroid\n of the geometry\n\n\nrepresentative point\n of the geometry\n\n\nbounding box\n (bbox) containing the geometry.\n\n\n\n\nAll geographic data is in WGS84 projection.\n\n\nAPI\n\n\nThe information for each country has been indexed by the ISO 3166-1 Alpha-3 Country Code and is exposed in various formats:\n\n\n\n\njson\n: country info in JSON format (does not includes geometry but includes bbox, centroid and representative_point)\n\n\n\n\n {\n    SUBREGION: 39,\n    NAME: \nItaly\n,\n    AREA: 29411,\n    REGION: 150,\n    LON: 12.8,\n    representative_point: [\n      12.681734027329481,\n      42.50430300000005\n    ]\n    ISO3: \nITA\n,\n    ISO2: \nIT\n,\n    FIPS: \nIT\n,\n    bbox: [\n      6.619759999999985,\n      36.64916200000005,\n      18.514999000000046,\n      47.09471899999994\n    ],\n    UN: 380,\n    LAT: 42.7,\n    centroid: [\n      12.071670031437792,\n      42.79116216524726\n    ],\n    POP2005: 5864636\n}\n\n\n\n\nexample: \nhttp://inmagik.github.io/world-countries/countries/ITA.json\n\n\n\n\n\n\ngeojson\n: GeoJSON file with country info (as a FeatureCollection with one item)\n\n\nexample: \nhttp://inmagik.github.io/world-countries/countries/ITA.geojson\n\n\n\n\n\n\njavascript\n: a file containing the WorldBorders object, populated with the requested country data. Same content as json, but in js context and loadable via \nscript\n tag\n\n\nexample: \nhttp://inmagik.github.io/world-countries/countries/ITA.js\n\n\n\n\n\n\nBuilding the files\n\n\nThe files can be built with the python script in the \"maker\" folder. To use it you must build a suitable python environment as described in requirements.txt file. More docs to come.\n\n\nData Sources\n\n\nCurrent data has been built from:\n\nworld borders\n: http://thematicmapping.org/downloads/TM_WORLD_BORDERS-0.3.zip\n\n\nHire us\n\n\nThis repo is maintained by \nINMAGIK\n.", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#world-countries", 
+            "text": "This repository contains geographic info of countries of the world as static files.", 
+            "title": "world-countries"
+        }, 
+        {
+            "location": "/#data", 
+            "text": "Data comes from the \"WORLD BORDERS\" dataset provided by Bjorn Sandvik, http://www.thematicmapping.org. The dataset is available under a Creative Commons Attribution-Share Alike License. If you use this dataset, please provide a link to the original source.  The original dataset consists of a shapefile with all countries of the world with the following data fields:   FIPS  String(2)   FIPS 10-4 Country Code  ISO2  String(2)   ISO 3166-1 Alpha-2 Country Code  ISO3  String(3)   ISO 3166-1 Alpha-3 Country Code  UN    Short Integer(3)    ISO 3166-1 Numeric-3 Country Code  NAME  String(50)  Name of country/area  AREA  Long Integer(7) Land area, FAO Statistics (2002)  POP2005   Double(10,0)    Population, World Population Prospects (2005)  REGION    Short Integer(3)    Macro geographical (continental region), UN Statistics  SUBREGION Short Integer(3)    Geographical sub-region, UN Statistics  LON   FLOAT (7,3) Longitude  LAT   FLOAT (6,3) Latitude   All the geometries have been preprocessed to calculate some useful information:   centroid  of the geometry  representative point  of the geometry  bounding box  (bbox) containing the geometry.   All geographic data is in WGS84 projection.", 
+            "title": "DATA"
+        }, 
+        {
+            "location": "/#api", 
+            "text": "The information for each country has been indexed by the ISO 3166-1 Alpha-3 Country Code and is exposed in various formats:   json : country info in JSON format (does not includes geometry but includes bbox, centroid and representative_point)    {\n    SUBREGION: 39,\n    NAME:  Italy ,\n    AREA: 29411,\n    REGION: 150,\n    LON: 12.8,\n    representative_point: [\n      12.681734027329481,\n      42.50430300000005\n    ]\n    ISO3:  ITA ,\n    ISO2:  IT ,\n    FIPS:  IT ,\n    bbox: [\n      6.619759999999985,\n      36.64916200000005,\n      18.514999000000046,\n      47.09471899999994\n    ],\n    UN: 380,\n    LAT: 42.7,\n    centroid: [\n      12.071670031437792,\n      42.79116216524726\n    ],\n    POP2005: 5864636\n}  example:  http://inmagik.github.io/world-countries/countries/ITA.json    geojson : GeoJSON file with country info (as a FeatureCollection with one item)  example:  http://inmagik.github.io/world-countries/countries/ITA.geojson    javascript : a file containing the WorldBorders object, populated with the requested country data. Same content as json, but in js context and loadable via  script  tag  example:  http://inmagik.github.io/world-countries/countries/ITA.js", 
+            "title": "API"
+        }, 
+        {
+            "location": "/#building-the-files", 
+            "text": "The files can be built with the python script in the \"maker\" folder. To use it you must build a suitable python environment as described in requirements.txt file. More docs to come.", 
+            "title": "Building the files"
+        }, 
+        {
+            "location": "/#data-sources", 
+            "text": "Current data has been built from: world borders : http://thematicmapping.org/downloads/TM_WORLD_BORDERS-0.3.zip", 
+            "title": "Data Sources"
+        }, 
+        {
+            "location": "/#hire-us", 
+            "text": "This repo is maintained by  INMAGIK .", 
+            "title": "Hire us"
+        }
+    ]
+}
